@@ -19,6 +19,8 @@ services:
       - mariadb
     volumes:
       - web:/var/www/html
+    env_file:
+      - .env
     networks:
       - inception
 
@@ -27,6 +29,8 @@ services:
     container_name: mariadb
     volumes:
       - database:/var/lib/mysql
+    env_file:
+      - .env
     networks:
       - inception
 

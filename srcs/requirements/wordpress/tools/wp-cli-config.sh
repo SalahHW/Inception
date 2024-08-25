@@ -8,8 +8,8 @@ chmod +x ./wp-cli.phar
 
 ./wp-cli.phar core download --locale=fr_FR --allow-root
 
-./wp-cli.phar config create --dbname=wordpress --dbuser=wpuser --dbpass=password --dbhost=mariadb --allow-root
+./wp-cli.phar config create --dbname=$DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASS --dbhost=mariadb --allow-root
 
-./wp-cli.phar core install --url=sbouheni.42.fr --title=inception --admin_user=admin --admin_password=admin --admin_email=admin@admin.com --allow-root
+./wp-cli.phar core install --url=$WP_URL --title=inception --admin_user=$WP_USER --admin_password=$WP_PASS --admin_email=$WP_MAIL --allow-root
 
 php-fpm8.2 -F
