@@ -1,10 +1,11 @@
 FROM debian:latest
 
 RUN apt update && apt install -y \
+    gettext \
     mariadb-server
 
 COPY ./config/50-server.cnf /etc/mysql/mariadb.conf.d/.
-COPY ./config/init.sql /etc/mysql/.
+COPY ./config/init.sql .
 COPY ./tools/install_db.sh .
 
 RUN mkdir /run/mysqld &&\
