@@ -74,14 +74,14 @@ server {
 	#}
 }
 
-server {
-    listen 80; 
-    listen [::]:80;
+# server {
+#     listen 80; 
+#     listen [::]:80;
     
-    server_name sbouheni.42.fr;
+#     server_name sbouheni.42.fr;
 
-    return 444; 
-}
+#     return 444; 
+# }
 
 
 # Virtual Host configuration for example.com
